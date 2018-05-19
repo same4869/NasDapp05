@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>星云链DAPP-区块链打砖块游戏</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<style type="text/css">
+		#canvas{margin: 0 auto;}
+	</style>
+</head>
+<body background="../../img/bg.jpeg">
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>区块链打砖块游戏<span><br>基于星云链的DAPP游戏，游戏数据可上链，不可篡改可追溯更可靠</span></h1><br>
+			<div class="icon-xingyun">
+				<span>
+					<img src="./img/icon-xingyun1.png">
+				</span>
+			</div>
+			<div class="noExtension" id="noExtension">
+				友情提示：使用前请确保已经安装<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">星云链钱包</a> 喔~
+		</div>
+		</header>
+		<div class="content-wrapper">
+			<div class="canvas">
+				<canvas id="canvas" width="800" height="600"></canvas>
+			</div>
+			<div class="rank-list-container">
+				<h4>玩家游戏榜↓↓↓</h4>
+				<ul class="rank-list" id="itemList">
+
+				</ul>
+			</div>
+		</div>
+		<div class="related">
+			<h5>DAPP游戏使用教程</h5>
+			
+			<h6>上方游戏区域点击鼠标开始游戏，移动鼠标控制“炮台”砖块在底部移动，点击鼠标开炮消灭从上面掉下来的砖块。</h6>
+			<h6>消灭砖块越多则分数越高，如果超过3个砖块掉下来超出底座，游戏结束</h6>
+			<h6>游戏结束会提示当前玩家保存游戏积分到星云链中，同时还会公布游戏排行榜，游戏大神就是你</h6>
+
+			<p>Copyright ©2018 SC Team, All Rights Reserved</p>
+		</div>
+	</div>
+	<script type="text/javascript" src="./jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./dist/nebulas.js"></script>
+	<script type="text/javascript" src="./dist/nebPay.js"></script>
+	<script src="js/BlockBlaster.js"></script>
+</body>
+</html>
