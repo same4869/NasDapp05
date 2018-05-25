@@ -290,5 +290,24 @@ a:hover,a:focus{color:#74777b;}
 .rank-list-ul{
 	max-height: 500px;
     overflow: auto;
-    margin-bottom: 30px;
+	margin-bottom: 30px;
+	border: 2px solid lightblue;
+	list-style: none;
+}
+.head-title {
+	margin-left: 70px;
+}
+#noExtension {
+	margin-left: 70px;
+	color: white;
+}
+.game-rules {
+	color: white;
+    font-size: 1em;
+}
+.about-us {
+	color: white;
+}
+.all-rights {
+	color: white;
 }

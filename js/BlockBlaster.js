@@ -79,7 +79,7 @@
 			console.log(itemList);
             for(var i = 0, iLen = itemList.length; i < iLen; i++) {
                 html += '<li>' +
-				'<p class="item-content"><font color="red">玩家：'+ itemList[i].from + '<br>分数：' + itemList[i].score + '</font></p>' +
+				'<p class="item-content"><font color="white">玩家：'+ itemList[i].from + '<br>分数：' + itemList[i].score + '</font></p>' +
 						'</li>';
 						console.log(html);
             }
