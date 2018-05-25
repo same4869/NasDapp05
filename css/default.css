@@ -273,3 +273,11 @@ a:hover,a:focus{color:#74777b;}
 .item-content {
 	color: #2f3238
 }
+#canvas {
+	margin-top: -50px;
+}
+
+.rank-list-container {
+    display: inline-block;
+    max-width: 800px;
+}

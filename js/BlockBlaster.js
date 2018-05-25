@@ -29,9 +29,9 @@
 	var NebPay
 	var nebPay
 	var nebulas
-	dappContactAddress = "n1hJpHHpkJzokroG368WZYR14yiyT46jzpp";
+	dappContactAddress = "n1nXcWpsAP6R6qe7KRJXKEokwRoWVSnoVrv";
 	nebulas = require("nebulas"), neb = new nebulas.Neb();
-	neb.setRequest(new nebulas.HttpRequest("https://testnet.nebulas.io"));
+	neb.setRequest(new nebulas.HttpRequest("https://mainnet.nebulas.io"));
 	
 	NebPay = require("nebpay");     //https://github.com/nebulasio/nebPay
 	nebPay = new NebPay();
@@ -174,7 +174,7 @@
 		fader += .1 * 1/fps;
 		ctx.fillStyle = "rgba(255,255,255," + fader + ")";
 		ctx.font = "72px sans-serif";
-		ctx.fillText("Click Go",canvas.width/2 - 140,canvas.height/2);
+		ctx.fillText("点我开始",canvas.width/2 - 140,canvas.height/2);
 		drawScore();
 	}
 	

@@ -1,53 +1,130 @@
-<!doctype html>
-<html lang="zh">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>星云链DAPP-区块链打砖块游戏</title>
-	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-	<link rel="stylesheet" type="text/css" href="css/default.css">
-	<style type="text/css">
-		#canvas{margin: 0 auto;}
-	</style>
-</head>
-<body background="../../img/bg.jpeg">
-	<div class="htmleaf-container">
-		<header class="htmleaf-header">
-			<h1>区块链打砖块游戏<span><br>基于星云链的DAPP游戏，游戏数据可上链，不可篡改可追溯更可靠</span></h1><br>
-			<div class="icon-xingyun">
-				<span>
-					<img src="./img/icon-xingyun1.png">
-				</span>
-			</div>
-			<div class="noExtension" id="noExtension">
-				友情提示：使用前请确保已经安装<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">星云链钱包</a> 喔~
-		</div>
-		</header>
-		<div class="content-wrapper">
-			<div class="canvas">
-				<canvas id="canvas" width="800" height="600"></canvas>
-			</div>
-			<div class="rank-list-container">
-				<h4>玩家游戏榜↓↓↓</h4>
-				<ul class="rank-list" id="itemList">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Hyperspace by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/default.css">
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 
-				</ul>
-			</div>
-		</div>
-		<div class="related">
-			<h5>DAPP游戏使用教程</h5>
-			
-			<h6>上方游戏区域点击鼠标开始游戏，移动鼠标控制“炮台”砖块在底部移动，点击鼠标开炮消灭从上面掉下来的砖块。</h6>
-			<h6>消灭砖块越多则分数越高，如果超过3个砖块掉下来超出底座，游戏结束</h6>
-			<h6>游戏结束会提示当前玩家保存游戏积分到星云链中，同时还会公布游戏排行榜，游戏大神就是你</h6>
+	</head>
+	<body>
 
-			<p>Copyright ©2018 SC Team, All Rights Reserved</p>
-		</div>
-	</div>
-	<script type="text/javascript" src="./jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="./dist/nebulas.js"></script>
-	<script type="text/javascript" src="./dist/nebPay.js"></script>
-	<script src="js/BlockBlaster.js"></script>
-</body>
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">区块链打砖块</a></li>
+							<li><a href="#one">玩家排行榜</a></li>
+							<li><a href="#two">关于星云链</a></li>
+							<li><a href="#three">关于我们</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<h1>区块链打砖块2.0合约交互升级版</h1>
+						<div class="noExtension" id="noExtension">
+								友情提示：使用前请确保已经安装<a target="_blank" href="https://github.com/ChengOrangeJu/WebExtensionWallet">星云链钱包</a> 喔~</div>
+						<div class="inner">
+							<div class="canvas">
+								<canvas id="canvas" width="800" height="600"></canvas>
+							</div>
+								<p>游戏规则：鼠标点击游戏区域开始游戏，移动鼠标控制“炮台”砖块在底部移动，点击鼠标开炮消灭从上面掉下来的砖块。<br>消灭砖块越多则分数越高，如果超过3个砖块掉下来超出底座，游戏结束。<br>游戏结束会提示当前玩家保存游戏积分到星云链中，同时还会公布游戏排行榜。</p>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/pic05.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<div class="rank-list-container">
+										<h4>游戏风云榜（显示每局游戏的分数）</h4>
+										<ul class="rank-list" id="itemList">
+						
+										</ul>
+									</div>
+								</div>
+							</div>
+						</section>
+					</section>
+                    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>关于星云链</h2>
+							<p>星云链是全球首个区块链搜索引擎，发掘区块链价值新维度。通过定义区块链世界的基本价值尺度，帮助用户更高效地发现和使用区块链上日渐丰富的的价值信息。</p>
+							<div class="features">
+								<section>
+									<span class="icon major fa-code"></span>
+									<h3>价值尺度</h3>
+									<p>星云指数（Nebulas Rank）衡量区块链世界多维度的数据价值。</p>
+								</section>
+								<section>
+									<span class="icon major fa-lock"></span>
+									<h3>自进化</h3>
+									<p>星云原力（Nebulas Force）提供快速迭代、无需硬分叉的升级能力。</p>
+								</section>
+								<section>
+									<span class="icon major fa-cog"></span>
+									<h3>原生激励</h3>
+									<p>星云激励（Nebulas Incentive）奖励对生态有贡献的开发者和用户。</p>
+								</section>
+								<section>
+									<span class="icon major fa-desktop"></span>
+									<h3>星云链官方网站</h3>
+									<p>https://nebulas.io/cn/</p>
+								</section>
+							</div>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>关于我们</h2>
+							<p>same-flower工作小组是一个区块链应用开发兴趣小组，致力于开发出更多更优质的DAPP，欢迎大家提宝贵意见和建议，邮箱same4869@126.com</p>
+					
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; same-flower All rights reserved.</li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<!-- <script type="text/javascript" src="./jquery-3.3.1.min.js"></script> -->
+			<script type="text/javascript" src="./dist/nebulas.js"></script>
+			<script type="text/javascript" src="./dist/nebPay.js"></script>
+			<script src="js/BlockBlaster.js"></script>
+
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
